@@ -6,6 +6,46 @@ body {
 .results {
     background-color: $bg-results;
     padding-top:2rem;
+    padding-bottom:2rem;
+
+    #btn-top {
+        width:100%;
+        margin-top: 3.75rem;
+    }
+
+    @media (max-width: $breakpoint-large){
+        &__noresults {    
+            &--pic {
+                display: table;
+                margin:0 auto;
+                padding: 2rem 0 0;
+            }    
+        }
+    }
+
+    @media (min-width: $breakpoint-large){
+        padding-top:3rem;
+        padding-bottom:3rem;
+
+        &__noresults {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 12.5rem;
+            align-items: center;
+
+            &--pic img {
+                width: 6.5rem;
+            }
+
+        }
+
+    }
+
+    &__no-results {
+        padding:2rem 0;
+        display: table;
+        margin: 0 auto;
+    }
 
     @media (max-width: $breakpoint-large){
 
@@ -48,6 +88,7 @@ body {
 
         &--empty {
             color:$gray-title;
+            margin-bottom: 1rem;
         }
 
     }
@@ -55,6 +96,8 @@ body {
     &__text {
         color:$gray-title;
         margin:0;
+        line-height: 1.688rem;
+        font-weight: 500;
     }
 
     &__cards {
