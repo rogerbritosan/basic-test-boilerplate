@@ -174,11 +174,14 @@ body {
 
             &--pic {
                 position:absolute;
-                background-color:red;
+                /*background-color:red;*/
                 width: 12rem;
                 height: 12rem;
                 top: 2.6rem;
                 left: 2rem;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
 
                 img {
                     max-width: 100%;
@@ -198,7 +201,7 @@ body {
 
             &--name {
                 position:absolute;
-                background-color:orange;
+                /*background-color:orange;*/
                 top:16rem;
                 left:1.2rem;
                 font-size:1rem;
@@ -216,7 +219,7 @@ body {
 
             &--price {
                 position:absolute;
-                background-color:purple;
+                /*background-color:purple;*/
                 top:18rem;
                 left:1.2rem;
                 font-size:1rem;
@@ -258,7 +261,7 @@ body {
                     height:31.875rem; 
 
                     .results__cards--item--pic {
-                        background:yellow;
+                        /*background:yellow;*/
                         width: 23.313rem;
                         height: 21.875rem;
                     }

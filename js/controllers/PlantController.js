@@ -124,8 +124,8 @@ export default class PlantController {
         
             this.listEl.innerHTML += `
             <li class="results__cards--item ${position}">
-                <div class="results__cards--item--pic">
-                    <img src="${item.url}" alt="${item.name}">
+                <div class="results__cards--item--pic" style="background-image:url(${item.url});">
+                    
                 </div>
                 <div class="results__cards--item--name">
                 ${item.name}
