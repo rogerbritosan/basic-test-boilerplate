@@ -180,6 +180,13 @@ body {
                 top: 2.6rem;
                 left: 2rem;
 
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    display: table;
+                    margin: 0 auto;
+                }
+
                 @media (min-width: $breakpoint-large){
                     width: 9rem;
                     height: 8rem;

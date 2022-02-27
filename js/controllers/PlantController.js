@@ -6,15 +6,14 @@ export default class PlantController {
 
         this.formEl = document.getElementById(formId);
         this.listEl = document.getElementById(listId);
-
+        this.goTo('arrow-down','order');
+        this.goTo('btn-top','header');
         this.onChange();
 
     }
 
     onChange(){
-
         this.getOrder();
-
     }
 
     getOrder(){  
@@ -54,15 +53,13 @@ export default class PlantController {
         .then(res => {res.json()
             .then(data=> this.fetchList(data))
         })
-        .catch(e=>console.log('deu erro: ' + e.message));
+        .catch(e=>{console.log('deu erro: ' + e.message)});
 
     }
 
     fetchList(data){
 
         let plants = [];
-
-        //console.log('data',data);
 
         data.forEach((d,index) => {
 
@@ -86,6 +83,8 @@ export default class PlantController {
     addItem(items){
 
         this.listEl.innerHTML = "";
+
+        console.log(items.length);
 
         items.forEach((item, index) => {
             let position = "";
@@ -126,13 +125,13 @@ export default class PlantController {
             this.listEl.innerHTML += `
             <li class="results__cards--item ${position}">
                 <div class="results__cards--item--pic">
-                    <img src="${item.url}" alt="">
+                    <img src="${item.url}" alt="${item.name}">
                 </div>
                 <div class="results__cards--item--name">
-                Euphorbia eritrea
+                ${item.name}
                 </div>
                 <div class="results__cards--item--price">
-                $25
+                ${item.price}
                 </div>
                 <div class="results__cards--item--icons"></div>
             </li>
@@ -140,6 +139,14 @@ export default class PlantController {
 
 
 
+        });
+    }
+
+    goTo(btnEl, targetEl){
+
+        document.getElementById(btnEl).addEventListener('click',() => {
+            var el = document.getElementById(targetEl);
+            document.documentElement.scrollTop = el.offsetTop;
         });
     }
 
