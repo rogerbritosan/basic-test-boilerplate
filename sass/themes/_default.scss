@@ -74,7 +74,7 @@ body {
                 "first first fourth fifth"
                 "sixth seventh eighth ninth"
             ;
-            column-gap: 1.563rem;
+            gap: 1.563rem;
         }
 
         &--item {
@@ -90,6 +90,42 @@ body {
             @media (min-width: $breakpoint-large){
                 width:12.875rem;
                 height:15.313rem;    
+
+                &.first {
+                    grid-area: first;
+                }
+    
+                &.second {
+                    grid-area: second;
+                }
+    
+                &.third {
+                    grid-area: third;
+                }
+    
+                &.fourth {
+                    grid-area: fourth;
+                }
+    
+                &.fifth {
+                    grid-area: fifth;
+                }
+    
+                &.sixth {
+                    grid-area: sixth;
+                }
+    
+                &.seventh {
+                    grid-area: seventh;
+                }
+    
+                &.eighth {
+                    grid-area: eighth;
+                }
+    
+                &.ninth {
+                    grid-area: ninth;
+                }
             }
 
             &--pic {
