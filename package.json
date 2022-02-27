@@ -9,6 +9,8 @@
     "deploy": "yarn build && surge ./dist"
   },
   "dependencies": {
+    "controllers": "0.0.2",
+    "js": "^0.1.0",
     "parcel": "1.12.4",
     "surge": "^0.23.0"
   },
