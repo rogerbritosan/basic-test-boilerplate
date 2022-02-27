@@ -1,3 +1,5 @@
+import Plant from "../models/Plant";
+
 export default class PlantController {
 
     constructor(formId, listId){
@@ -5,8 +7,8 @@ export default class PlantController {
         this.formEl = document.getElementById(formId);
         this.listEl = document.getElementById(listId);
 
-        console.log(this.formEl);
-        console.log(this.listEl);
+        // console.log(this.formEl);
+        // console.log(this.listEl);
 
         this.onChange();
 
@@ -25,7 +27,6 @@ export default class PlantController {
                 this.getValues();
             });            
         });
-
         
     }
 
@@ -54,9 +55,21 @@ export default class PlantController {
 
         fetch(`https://front-br-challenges.web.app/api/v2/green-thumb/?sun=${selectOrder[0]}&water=${selectOrder[1]}&pets=${selectOrder[2]}`, options)
         .then(res => {res.json()
-            .then(data=> console.log(data))
+            .then(data=> this.fetchList(data))
         })
         .catch(e=>console.log('deu erro: ' + e.message));
+
+    }
+
+    fetchList(data){
+
+        console.log('data',data);
+
+        data.forEach((d,index) => {
+
+
+        });
+
 
     }
 
