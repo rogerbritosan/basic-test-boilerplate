@@ -8,6 +8,23 @@
         font-weight: 700;
         color: $white;
         margin-top:2rem;
+        width: 19rem;
+        line-height: 3rem;
+        line-height: 49px;
+        position:relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width:5rem;
+            height: 3rem;
+            background-image:url(/images/icons/arrow-down.svg);
+            background-repeat: no-repeat;
+            bottom: -4rem;
+            left: 0;
+        }
+
+
     }
 
     @media (max-width: $breakpoint-large){
