@@ -1,0 +1,31 @@
+.header {    
+    background-repeat: no-repeat;
+    background-color: $light-green;
+    padding-top:2.5rem;
+
+    &__slogan {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: $white;
+        margin-top:2rem;
+    }
+
+    @media (max-width: $breakpoint-large){
+        height:37rem;
+        background-image:url(/images/hero/mobile/mobile-leaves.png), url(/images/hero/mobile/mobile-plantperson.png);
+        background-position: 0 0, center calc(100% - 1rem);
+        background-size: contain, 87%;
+    }
+
+    @media (min-width: $breakpoint-large){
+        height:32rem;
+        background-image:
+            url(/images/hero/desktop/left-leaves.png), 
+            url(/images/hero/desktop/plantperson.png), 
+            url(/images/hero/desktop/right-leaves.png)
+        ;
+        background-position: left 0, calc(100% - 30rem) 0, right 0;
+        background-size: contain, contain, contain;
+    }
+
+}

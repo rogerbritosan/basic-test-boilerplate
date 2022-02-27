@@ -1,0 +1,65 @@
+.fields {
+    padding-top:1.125rem;
+    padding-bottom:1.125rem;
+
+    @media (min-width: $breakpoint-large){
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 6.25rem;
+        padding-top:3.0rem;
+        padding-bottom:3.0rem;
+    }
+
+    &__field {
+        padding-top:5.5rem;
+        font-size: 0.875rem;
+        line-height:1.375rem;
+        color: $gray;
+
+        @media (max-width: $breakpoint-large){
+            margin-bottom: 3rem;
+        }
+
+        &--sun,
+        &--watering-can,
+        &--dog {
+            background-repeat:no-repeat;
+            background-size: contain;
+        }
+
+        &--sun {
+            background-image: url(/images/illustrations/sun.svg);
+            background-size: 5rem;
+        }
+
+        &--watering-can {
+            background-image: url(/images/illustrations/wateringcan.svg);
+            background-size: 6.5rem;
+        }
+
+        &--dog {
+            background-image: url(/images/illustrations/dog.svg);
+            background-size: 5rem;
+        }
+
+        &--select {
+            display:block;
+            color: $gray;
+            margin-top:1.5rem;
+            height: 2.5rem;
+            border-radius: 1.563rem;
+            padding: 0 4rem 0 1.5rem;
+            background-color: $white;
+            background-image:url(/images/icons/select-arrow-down.svg);
+            background-position: calc(100% - 1rem) center;
+            border: 1px solid $gray-border;
+            background-repeat: no-repeat;
+            text-align: left;
+            appearance: none;
+            width: 100%;
+
+        }
+
+    }
+
+}

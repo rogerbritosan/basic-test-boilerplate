@@ -1,0 +1,23 @@
+.btn {
+    height: 3.125rem;
+    border-radius: 1.563rem;
+    padding: 0 4rem;
+    color: $green;
+    background-color: transparent;
+    border: 1px solid $green;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+
+    &--up {
+        background-image:url(/images/icons/arrow-up.svg);
+        width: 1.375rem;
+        height: 1.125rem;
+        display: inline-block;
+        margin-right: 1rem;
+        background-repeat: inherit;
+    }
+
+}

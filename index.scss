@@ -1,4 +1,25 @@
-body {
-    font-family: "Montserrat", sans-serif;
-    background-color: green;
-}
+@charset "UTF-8";
+
+// abstracts
+@import 'sass/abstracts/variables';
+
+// base
+@import 'sass/base/base';
+@import 'sass/base/fonts';
+@import 'sass/base/helpers';
+
+// components
+@import 'sass/components/button';
+@import 'sass/components/form';
+
+// layout
+@import 'sass/layout/header';
+
+// pages
+@import 'sass/pages/home';
+
+// themes
+@import 'sass/themes/default';
+
+// vendors
+@import 'sass/vendors/normalize';
