@@ -7,9 +7,6 @@ export default class PlantController {
         this.formEl = document.getElementById(formId);
         this.listEl = document.getElementById(listId);
 
-        // console.log(this.formEl);
-        // console.log(this.listEl);
-
         this.onChange();
 
     }
@@ -63,14 +60,87 @@ export default class PlantController {
 
     fetchList(data){
 
-        console.log('data',data);
+        let plants = [];
+
+        //console.log('data',data);
 
         data.forEach((d,index) => {
 
+            var plant = new Plant (
+                d.id, 
+                d.name, 
+                d.price,
+                d.sun, 
+                d.url,
+                d.water
+            );
+
+            plants.push(plant);
 
         });
 
+        this.addItem(plants);
 
+    }
+
+    addItem(items){
+
+        this.listEl.innerHTML = "";
+
+        items.forEach((item, index) => {
+            let position = "";
+
+            console.log('item',item);
+
+            switch(index){
+                case 0:
+                    position = "first";
+                    break;
+                case 1:
+                    position = "second";
+                    break;
+                case 2:
+                    position = "third";
+                    break;
+                case 3:
+                    position = "fourth";
+                    break;
+                case 4:
+                    position = "fifth";
+                    break;
+                case 5:
+                    position = "sixth";
+                    break;
+                case 6:
+                    position = "seventh";
+                    break;
+                case 7:
+                    position = "eighth";
+                    break;
+                case 8:
+                    position = "ninth";
+                    break;
+                default:
+            }
+        
+            this.listEl.innerHTML += `
+            <li class="results__cards--item ${position}">
+                <div class="results__cards--item--pic">
+                    <img src="${item.url}" alt="">
+                </div>
+                <div class="results__cards--item--name">
+                Euphorbia eritrea
+                </div>
+                <div class="results__cards--item--price">
+                $25
+                </div>
+                <div class="results__cards--item--icons"></div>
+            </li>
+            `;
+
+
+
+        });
     }
 
 }
