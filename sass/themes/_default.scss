@@ -51,6 +51,16 @@ body {
             border-radius:5px;
             position:relative;
 
+            @media (max-width: $breakpoint-large){    
+                width:16.125rem;
+                height:20rem;    
+            }
+
+            @media (min-width: $breakpoint-large){
+                width:12.875rem;
+                height:15.313rem;    
+            }
+
             &--pic {
                 position:absolute;
                 background-color:red;
@@ -58,6 +68,14 @@ body {
                 height: 12rem;
                 top: 2.6rem;
                 left: 2rem;
+
+                @media (min-width: $breakpoint-large){
+                    width: 9rem;
+                    height: 8rem;
+                    top: 1.6rem;
+                    left: 2rem;
+                }
+
             }
 
             &--name {
@@ -69,6 +87,13 @@ body {
                 font-weight:bold;
                 color: $dark-green;
                 z-index: 10;
+
+                @media (min-width: $breakpoint-large){
+                    top:11rem;
+                    left:1.2rem;
+                    font-size:1rem;
+                    z-index: 10;
+                }
             }
 
             &--price {
@@ -79,6 +104,12 @@ body {
                 font-size:1rem;
                 font-weight:bold;
                 color: $dark-green;
+
+                @media (min-width: $breakpoint-large){
+                    top:13rem;
+                    left:1.2rem;
+                    font-size:1rem;
+                }
             }
 
             &--icons {
@@ -91,58 +122,81 @@ body {
                 font-size:1rem;
                 font-weight:bold;
                 color: $dark-green;
-            }
 
-        }
-
-        @media (max-width: $breakpoint-large){
-
-            &--item {
-                width:16.125rem;
-                height:20rem;
-
-                &:first-child {
-                    position:relative;
-
-                    &:before {
-                        content: '✨ Staff favorite';
-                        position: absolute;
-                        z-index: 10;
-                        width: 8.6rem;
-                        top:1.25rem;
-                        height: 2.125rem;
-                        background-color: $light-green;
-                        padding-left:1.2rem;
-                        padding-top:0.5rem;
-                        box-sizing: border-box;
-                        font-size:0.8rem;
-                        font-weight:600;
-                        color:$white;
-                        -webkit-border-top-right-radius: 25px;
-                        -webkit-border-bottom-right-radius: 25px;
-                        -moz-border-radius-topright: 25px;
-                        -moz-border-radius-bottomright: 25px;
-                        border-top-right-radius: 25px;
-                        border-bottom-right-radius: 25px;
-                    }
+                @media (min-width: $breakpoint-large){
+                    width:7rem;
+                    height:2rem;
+                    top:12.5rem;
+                    right:1.2rem;
+                    font-size:1rem;
                 }
-
             }
 
-        }
+            &:first-child {
+                position:relative;
 
-        @media (min-width: $breakpoint-large){
-
-            &--item {
-                width:12.875rem;
-                height:15.313rem;
-
-                &:first-child {
+                @media (min-width: $breakpoint-large){
                     width:27.313rem;
-                    height:31.875rem;
-                }
+                    height:31.875rem; 
 
+                    .results__cards--item--pic {
+                        background:yellow;
+                        width: 23.313rem;
+                        height: 21.875rem;
+                    }
+
+                    .results__cards--item--name {
+                        font-size:2.188rem;
+                        left: 2rem;
+                        width: 13rem;
+                        top: 25rem;
+                    }
+
+                    .results__cards--item--price {
+                        font-size:1.5rem;
+                        top: 25rem;
+                        right: 2rem;
+                        text-align: right;
+                    }
+
+                    .results__cards--item--icons {
+                        width:10rem;
+                        height:3rem;
+                        top:27.5rem;
+                    }
+                    
+                } 
+
+                &:before {
+                    content: '✨ Staff favorite';
+                    position: absolute;
+                    z-index: 10;
+                    width: 8.6rem;
+                    top:1.25rem;
+                    height: 2.125rem;
+                    background-color: $light-green;
+                    padding-left:1.2rem;
+                    padding-top:0.5rem;
+                    box-sizing: border-box;
+                    font-size:0.8rem;
+                    font-weight:600;
+                    color:$white;
+                    -webkit-border-top-right-radius: 25px;
+                    -webkit-border-bottom-right-radius: 25px;
+                    -moz-border-radius-topright: 25px;
+                    -moz-border-radius-bottomright: 25px;
+                    border-top-right-radius: 25px;
+                    border-bottom-right-radius: 25px;
+
+                    @media (min-width: $breakpoint-large){
+                        width:11.813rem;
+                        height:2.688rem;
+                        font-size:1.125rem;
+                    }
+
+                }
             }
+
 
         }
 
