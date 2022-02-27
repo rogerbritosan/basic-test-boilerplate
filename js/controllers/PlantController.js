@@ -31,13 +31,13 @@ export default class PlantController {
         let selectOrder = [];
 
         [...this.formEl.elements].forEach((field, index) => {
-            if (field.name == 'sun' && field.value == ''){
-                field.value = 'high';
-            } else if (field.name == 'water' && field.value == ''){
-                field.value = 'regularly';
-            } else if (field.name == 'pet' && field.value == ''){
-                field.value = 'false';
-            }
+            // if (field.name == 'sun' && field.value == ''){
+            //     field.value = 'high';
+            // } else if (field.name == 'water' && field.value == ''){
+            //     field.value = 'regularly';
+            // } else if (field.name == 'pet' && field.value == ''){
+            //     field.value = 'false';
+            // }
             selectOrder.push(field.value);
         });    
 
@@ -51,9 +51,16 @@ export default class PlantController {
 
         fetch(`https://front-br-challenges.web.app/api/v2/green-thumb/?sun=${selectOrder[0]}&water=${selectOrder[1]}&pets=${selectOrder[2]}`, options)
         .then(res => {res.json()
-            .then(data=> this.fetchList(data))
+            .then(data=> {
+                this.fetchList(data);
+                document.getElementById('results').style.display = "block";
+                document.getElementById('noresults').style.display = "none";
+            })
         })
-        .catch(e=>{console.log('deu erro: ' + e.message)});
+        .catch(e=>{
+            console.log('deu erro: ' + e.message);
+            document.getElementById('noresults').style.display = "block";
+        });
 
     }
 
