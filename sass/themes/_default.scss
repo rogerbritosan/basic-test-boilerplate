@@ -7,6 +7,21 @@ body {
     background-color: $bg-results;
     padding-top:2rem;
 
+    @media (max-width: $breakpoint-large){
+
+        &__list {
+            &--wrap {
+                max-width: 100%;
+
+                .results__cards {
+                    display: grid;
+                    grid-auto-flow: column;
+                    column-gap: 1rem;
+                }
+            }
+        }
+    }
+
     &__pick {
         background-image:url(/images/illustrations/pick.png);
         background-repeat: no-repeat;
@@ -45,6 +60,22 @@ body {
     &__cards {
         list-style:none;
         padding:0;
+
+        @media (max-width: $breakpoint-large){
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: 100%;
+        }
+
+        @media (min-width: $breakpoint-large){
+            display: grid;
+            grid-template-areas:
+                "first first second third"
+                "first first fourth fifth"
+                "sixth seventh eighth ninth"
+            ;
+            column-gap: 1.563rem;
+        }
 
         &--item {
             background-color:$white;
