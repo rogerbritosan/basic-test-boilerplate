@@ -75,6 +75,7 @@ export default class PlantController {
                 d.name, 
                 d.price,
                 d.sun, 
+                d.toxicity,
                 d.url,
                 d.water
             );
@@ -96,7 +97,7 @@ export default class PlantController {
         items.forEach((item, index) => {
             let position = "";
 
-            console.log('item',item);
+            //console.log('item',item);
 
             switch(index){
                 case 0:
@@ -138,9 +139,13 @@ export default class PlantController {
                 ${item.name}
                 </div>
                 <div class="results__cards--item--price">
-                ${item.price}
+                $${item.price}
                 </div>
-                <div class="results__cards--item--icons"></div>
+                <div class="results__cards--item--icons">
+                    <div class="icon-feature toxicity--${item.toxicity}"></div>
+                    <div class="icon-feature sun--${item.sun}"></div>
+                    <div class="icon-feature water--${item.water}"></div>
+                </div>
             </li>
             `;
 
