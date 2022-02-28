@@ -297,8 +297,43 @@ body {
                 }
             }
 
+            &.staff_favorite--true {                
+
+                &:before {
+                    content: '✨ Staff favorite';
+                    position: absolute;
+                    z-index: 10;
+                    width: 8.6rem;
+                    top:1rem;
+                    height: 2.125rem;
+                    background-color: $light-green;
+                    padding-left:1.2rem;
+                    padding-top:0.5rem;
+                    box-sizing: border-box;
+                    font-size:0.8rem;
+                    font-weight:600;
+                    color:$white;
+                    -webkit-border-top-right-radius: 25px;
+                    -webkit-border-bottom-right-radius: 25px;
+                    -moz-border-radius-topright: 25px;
+                    -moz-border-radius-bottomright: 25px;
+                    border-top-right-radius: 25px;
+                    border-bottom-right-radius: 25px;                    
+
+                }
+            }
+
             &:first-child {
                 position:relative;
+
+                &.staff_favorite--true {                
+
+                    &:before {
+                        width:11.813rem;
+                        height:2.688rem;
+                        font-size:1.125rem;        
+                    }
+                }
 
                 @media (min-width: $breakpoint-large){
                     width:27.313rem;
@@ -341,35 +376,6 @@ body {
                     }
                     
                 } 
-
-                &:before {
-                    content: '✨ Staff favorite';
-                    position: absolute;
-                    z-index: 10;
-                    width: 8.6rem;
-                    top:1.25rem;
-                    height: 2.125rem;
-                    background-color: $light-green;
-                    padding-left:1.2rem;
-                    padding-top:0.5rem;
-                    box-sizing: border-box;
-                    font-size:0.8rem;
-                    font-weight:600;
-                    color:$white;
-                    -webkit-border-top-right-radius: 25px;
-                    -webkit-border-bottom-right-radius: 25px;
-                    -moz-border-radius-topright: 25px;
-                    -moz-border-radius-bottomright: 25px;
-                    border-top-right-radius: 25px;
-                    border-bottom-right-radius: 25px;
-
-                    @media (min-width: $breakpoint-large){
-                        width:11.813rem;
-                        height:2.688rem;
-                        font-size:1.125rem;
-                    }
-
-                }
             }
 
 

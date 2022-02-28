@@ -74,6 +74,7 @@ export default class PlantController {
                 d.id, 
                 d.name, 
                 d.price,
+                d.staff_favorite,
                 d.sun, 
                 d.toxicity,
                 d.url,
@@ -131,7 +132,7 @@ export default class PlantController {
             }
         
             this.listEl.innerHTML += `
-            <li class="results__cards--item ${position}">
+            <li class="results__cards--item staff_favorite--${item.toxicity} ${position}">
                 <div class="results__cards--item--pic" style="background-image:url(${item.url});">
                     
                 </div>
