@@ -207,7 +207,7 @@ body {
                 left:1.2rem;
                 font-size:1rem;
                 font-weight:bold;
-                color: $dark-green;
+                color: $green-products;
                 z-index: 10;
 
                 @media (min-width: $breakpoint-large){
@@ -225,7 +225,7 @@ body {
                 left:1.2rem;
                 font-size:1rem;
                 font-weight:bold;
-                color: $dark-green;
+                color: $green-products;
 
                 @media (min-width: $breakpoint-large){
                     top:13rem;
@@ -319,7 +319,7 @@ body {
 
                     .results__cards--item--price {
                         font-size:1.5rem;
-                        top: 25rem;
+                        top: 25.4rem;
                         right: 2rem;
                         text-align: right;
                     }
