@@ -8,10 +8,11 @@
         font-weight: 700;
         color: $white;
         margin-top:2rem;
-        width: 19rem;
+        width: 16rem;
         line-height: 3rem;
         line-height: 49px;
         position:relative;
+        cursor:pointer;
 
         &::after {
             content: '';
@@ -31,7 +32,7 @@
         height:37rem;
         background-image:url(/images/hero/mobile/mobile-leaves.png), url(/images/hero/mobile/mobile-plantperson.png);
         background-position: 0 0, center calc(100% - 1rem);
-        background-size: contain, 87%;
+        background-size: 100%, 87%;
     }
 
     @media (min-width: $breakpoint-large){
@@ -41,7 +42,7 @@
             url(/images/hero/desktop/plantperson.png), 
             url(/images/hero/desktop/right-leaves.png)
         ;
-        background-position: left 0, calc(100% - 30rem) 0, right 0;
+        background-position: -70% 0, calc(100% - 25rem) 0, right 0;
         background-size: contain, contain, contain;
     }
 
